@@ -8,12 +8,12 @@ output "my_group_id" {
     value = data.akamai_group.my_group_id
 }
 
-#Config Data
-data "akamai_appsec_configuration" "my_configuration" {
-    name = "my appsec config"
+#Config Property
+data "akamai_property" "my_property" {
+    name = "charlie_terraform"
+    version = "1"
 }
 
-output "my_appsec_config" {
-  value = data.akamai_appsec_configuration.my_configuration
+output "my_property" {
+  value = data.akamai_property.my_property
 }
-
