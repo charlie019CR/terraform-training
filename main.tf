@@ -1,19 +1,12 @@
-#Group Data
 data "akamai_group" "my_group_id" {
-    group_name  = "Akamai Technologies - Assets-1-3CV382"
-    contract_id = "1-3CV382"
+    group_name = "Akamai Professional Services-1-1NC95D"
+    contract_id = "ctr_1-1NC95D"
 }
 
-output "my_group_id" {
-    value = data.akamai_group.my_group_id
-}
+data "akamai_property" "my_properties" {
+    name = "devops-charlie_test"
+} 
 
-#Config Property
-data "akamai_property" "my_property" {
-    name = "charlie_terraform"
-    version = "1"
-}
-
-output "my_property" {
-  value = data.akamai_property.my_property
+data "akamai_appsec_configuration" "my_appsec_config" {
+    name = "shchoudh_waf_sc1"
 }
